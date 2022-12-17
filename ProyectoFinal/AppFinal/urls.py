@@ -1,0 +1,33 @@
+from django.urls import path
+from AppFinal import views
+
+urlpatterns = [
+    path('', views.inicio,name="Inicio"),
+    path('informacion/', views.informacion,name="Informacion"),
+    path('list/', views.list,name="List"),
+    path('busqueda/', views.busqueda,name="Busqueda"),
+    path('personal/create/',views.PersonalCreate.as_view(),name="NewPersonal"),
+    path('estudios/create/',views.EstudiosCreate.as_view(),name="NewEstudios"),
+    path('experiencia/create/',views.ExperienciaCreate.as_view(),name="NewExperiencia"),
+    path('personal/list/',views.PersonalList.as_view(),name="PersonalList"),
+    path('estudios/list/',views.EstudiosList.as_view(),name="EstudiosList"),
+    path('experiencia/list/',views.ExperienciaList.as_view(),name="ExperienciaList"),
+    path('leerPersonal/',views.leer_personal),
+    path('leerEstudios/',views.leer_estudios),
+    path('leerExperiencia/',views.leer_experiencia),
+    path('personal/edit/<pk>',views.PersonalEdit.as_view(),name="EditPersonal"),
+    path('personal/detail/<pk>',views.PersonalDetail.as_view(),name="DetailPersonal"),
+    path('personal/delete/<pk>',views.PersonalDelete.as_view(),name="DeletePersonal"),
+    path('estudios/edit/<pk>',views.EstudiosEdit.as_view(),name="EditEstudios"),
+    path('estudios/detail/<pk>',views.EstudiosDetail.as_view(),name="DetailEstudios"),
+    path('estudios/delete/<pk>',views.EstudiosDelete.as_view(),name="DeleteEstudios"),
+    path('experiencia/edit/<pk>',views.ExperienciaEdit.as_view(),name="EditExperiencia"),
+    path('Experiencia/detail/<pk>',views.ExperienciaDetail.as_view(),name="DetailExperiencia"),
+    path('Experiencia/delete/<pk>',views.ExperienciaDelete.as_view(),name="DeleteExperiencia"),
+    path('busquedaEdad/',views.busquedaEdad,name="Edad"),
+    path('edad/',views.edad),
+    path('busquedaAños/',views.busquedaAños,name="Años"),
+    path('años/',views.años),
+    path('busquedaIdiomas/',views.busquedaIdiomas,name="Idiomas"),
+    path('idiomas/',views.idiomas),
+]

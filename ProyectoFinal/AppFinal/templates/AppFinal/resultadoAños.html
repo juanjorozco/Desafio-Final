@@ -1,0 +1,23 @@
+{% extends "AppFinal/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+    <h4>Años de experiencia :</h4>{{años}}
+    <br>
+    <h4>Trabajos Anteriores:</h4> 
+    {%for experiencia in experiencia%}
+        {{experiencia.trabajos_anteriores}}
+    <br>
+    {%endfor%}
+    <h4>Correo:</h4>
+    {%for experiencia in experiencia%}
+        {{experiencia.correo}}
+    <br>
+    {%endfor%}
+    <br>
+    <br>
+    <a class="btn btn-primary" href="{% url 'Años' %}">Regresar</a>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "AppFinal/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+<header class="masthead">
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="text-center text-white">
+                    <h1 class="mb-5"> LISTADOS </h1>                            
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<h2> LISTADOS </h2>
+<h5>Si desea rectificar alguna información de los formularios seleccione alguna de las sigientes opciones, y busque su formularios a traves de su correo electronico</h5>
+<br>
+<nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+        <a class="btn btn-primary" href="{% url 'PersonalList' %}">Listado Personal</a>
+        <a class="btn btn-primary" href="{% url 'EstudiosList' %}">Listado Estudios</a>
+        <a class="btn btn-primary" href="{% url 'ExperienciaList' %}">Listado Experiencia</a>
+    </div>
+</nav>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "AppFinal/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+    <h4>Edad:</h4>{{edad}}
+    <br>
+    <h4>Nombre:</h4>
+    {%for personal in personal%}
+        {{personal.nombres}}
+    <br>
+    {%endfor%}
+    <h4>Apellido:</h4>
+    {%for personal in personal%}
+        {{personal.apellidos}}
+    <br>
+    {%endfor%}
+    <h4>Nacionalidad:</h4>
+    {%for personal in personal%}
+        {{personal.nacionalidad}}
+    <br>
+    {%endfor%}
+    <h4>Correo:</h4>
+    {%for personal in personal%}
+        {{personal.correo}}
+    <br>
+    {%endfor%}
+    <br>
+    <br>
+    <a class="btn btn-primary" href="{% url 'Edad' %}">Regresar</a>
+
+{% endblock %}

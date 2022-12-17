@@ -1,0 +1,28 @@
+{% extends "AppFinal/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+    <h4>Idiomas:</h4> {{idiomas}}
+    <br>
+    <h4>Carrera:</h4>
+    {%for estudios in estudios%}
+        {{estudios.carrera}}
+    <br>
+    {%endfor%}
+    <h4>Universidad:</h4>
+    {%for estudios in estudios%}
+        {{estudios.universidad}}
+    <br>
+    {%endfor%}
+    <h4>Correo:</h4>
+    {%for estudios in estudios%}
+        {{estudios.correo}}
+    <br>
+    {%endfor%}
+    <br>
+    <br>
+    <a class="btn btn-primary" href="{% url 'Idiomas' %}">Regresar</a>
+
+{% endblock %}

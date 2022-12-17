@@ -1,0 +1,21 @@
+{% extends "AppFinal/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+<h5>Nombres: {{personal.nombres}}
+<br>
+Apellidos: {{personal.apellidos}}
+<br>
+Edad: {{personal.edad}}
+<br>
+Nacionalidad: {{personal.nacionalidad}}
+<br>
+Correo: {{personal.correo}} <h5>
+<br>
+<br>
+
+<a class="btn btn-primary" href="{% url 'PersonalList' %}">Regresar</a>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "AppFinal/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+<h3>Formulario Estudios</h3>
+<br>
+<form method="post">{% csrf_token %}
+    <h5>¿Estás seguro que deseas borrar este formulario: "{{ object.correo }}"?</h5>
+    <br>
+    <br>
+    <input type="submit" value="Eliminar"/>
+</form>
+
+<br>
+<br>
+    <a class="btn btn-primary" href="{% url 'EstudiosList' %}">Regresar</a>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "AppFinal/padre.html" %} 
+
+{% load static %} 
+
+{% block contenidoQueCambia %}
+
+<header class="masthead">
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="text-center text-white">
+                    <h1 class="mb-5"></h1>                            
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<h3>Busca años de experiencia en especifico</h3>
+
+<form action="/AppFinal/años/" method="get">{% csrf_token %}
+    
+    <input type="number" name="años" id="años">
+    <input type="submit" value="Buscar">
+    
+</form>
+
+<br>
+<br>
+<a class="btn btn-primary" href="{% url 'Busqueda' %}">Regresar</a>
+
+{% endblock %}
